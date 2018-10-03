@@ -6,3 +6,27 @@ spring:
     driver-class-name: org.postgresql.Driver
 server:
   port: 8090 
+  
+  ---
+  
+spring:
+  profiles: PRODUCCION
+  datasource:
+    url: jdbc:postgresql://192.168.100.112:5432/cotizador
+    username: postgres
+    password: yizuz26l
+    driver-class-name: org.postgresql.Driver
+server:
+  port: 8090 
+  
+  ---
+  
+  spring:
+    profiles:DESARROLLO
+    datasource:
+         url: jdbc:postgresql://192.168.100.112:5432/cotizador
+    username: postgres
+    password: yizuz26l
+    driver-class-name: org.postgresql.Driver
+  server:
+    port:8090
